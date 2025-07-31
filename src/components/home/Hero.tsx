@@ -28,11 +28,11 @@ export default function Hero() {
           </div>
         </div>
         <div className="overflow-hidden" style={{ maxHeight: "30vh" }}>
-          <div className="container px-5">
+          <div className="container">
 
             <img
               src="https://www.orangepet.in/cdn/shop/articles/selective-closeup-cute-kitten-floor_1_800x.jpg?v=1693461218"
-              className="img-fluid border rounded-3 shadow-lg mb-4"
+              className="img-fluid border rounded-3 mb-4"
               alt="Hero image"
               width="700"
               height="500"
