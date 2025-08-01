@@ -1,8 +1,4 @@
 import { createContext } from "react";
+import type { AppContextType } from "../contexts/AppContext";
 
-export const AppContext = createContext({
-    room: {
-        id: '',
-        name: '',
-    }
-});
+export const AppContext = createContext<AppContextType | null>(null);

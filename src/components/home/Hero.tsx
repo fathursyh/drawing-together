@@ -1,4 +1,7 @@
-export default function Hero() {
+type HeroProps = {
+  drawHandler: VoidFunction
+}
+export default function Hero({drawHandler} : HeroProps) {
   return (
     <>
       <div className="px-4 pt-5 my-5 text-center">
@@ -16,6 +19,7 @@ export default function Hero() {
             <button
               type="button"
               className="btn btn-primary btn-lg px-4 me-sm-3"
+              onClick={drawHandler}
             >
               Draw Now
             </button>

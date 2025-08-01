@@ -1,4 +1,3 @@
-// /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Icon } from "@iconify/react";
 import { type PropsWithChildren, type RefObject } from "react";
 import { createPortal } from "react-dom";
@@ -10,10 +9,10 @@ export default function CustomModal({ ref, children }: ModalProps & PropsWithChi
     return createPortal(
         <>
             <dialog ref={ref} className="my-modal shadow-sm position-relative" style={{ minHeight: "10rem" }} onClick={() => ref.current!.close()}>
-                <form method="dialog" className="position-absolute" style={{ top: "0.8rem", right: "1rem" }}>
-                    <button type="submit" className="border-0" style={{ borderRadius: '100%', padding: 1, height: 32, width: 32, }}>
+                <form method="dialog" className="position-absolute p-0" style={{ top: "0.8rem", right: "1rem" }}>
+                    <div role="button" className="border-0 d-flex justify-content-center align-items-center" style={{ borderRadius: '100%', height: 32, width: 32, padding: 0}} autoFocus={false}>
                         <Icon icon={"mdi:close"} fontSize={24} className="text-danger" />
-                    </button>
+                    </div>
                 </form>
                 <div className="p-4 " style={{ minHeight: "10rem" }} onClick={(e) => e.stopPropagation()}>
                     {children}
